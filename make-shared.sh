@@ -16,4 +16,4 @@ clang++ -fPIC -c -Wall -Werror -Ilib -Iso-b so-b/b.cpp -o $DIR/b.o
 clang++ -shared -L$DIR -llib -o $DIR/libb.so $DIR/b.o
 
 # app
-clang++ -Wall -Werror -Iso-a -Iso-b -L$DIR -la -lb -llib -o $DIR/app app/m.cpp
+clang++ -Wall -Werror -Ilib -Iso-a -Iso-b -L$DIR -la -lb -llib -o $DIR/app app/m.cpp
